@@ -5,6 +5,10 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+//Heroku will assign the port automatically for our site,
+//but we need access to it.  the below means give port 3000 if env.PORT fails.
+const port = process.env.PORT || 3000
+
 
 const app = express()
 //Directory for static content as used by Express.
@@ -123,10 +127,10 @@ app.get('*', (req, resp) => {
 
 })
 
-
+            
 //Before the "get" can be used you must start the server as below.
 //The listen method call can only be used once in the app. 
-app.listen(3000, () => {
-        console.log('Server is up on port 3000')
+app.listen(port, () => {
+        console.log('Server is up on port ' + port +'.')
 })
 
