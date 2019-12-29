@@ -89,8 +89,7 @@ app.get('/weather', (req, resp) => {
 })
 
 app.get('/products', (req, resp) => {
-        console.log(req.query.search)
-
+        
         //Note: using return in the if statement causes the function to stop execution 
         //if an error occurs and will not try to send the response twice which is an error.
         if(!req.query.search) {
