@@ -18,8 +18,8 @@ weatherForm.addEventListener("submit", (event) => {
         if(data.error) {
           message1.textContent = 'Unable to find location, try another search.' // + data.error
         } else {
-          message1.textContent = data.place_name + '<br>' + data.forecast
-          //message2.textContent = data.forecast
+          message1.textContent = data.place_name 
+          message2.textContent = data.forecast
         }  
     })
   }) 
