@@ -5,8 +5,8 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
-//Heroku will assign the port automatically for our site,
-//but we need access to it.  the below means give port 3000 if env.PORT fails.
+//Heroku will assign the port automatically to our site,
+//but in localhost a port must be progrmatically assigned if the site is hosted on localhosted.
 const port = process.env.PORT || 3000
 
 
